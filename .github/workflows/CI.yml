@@ -1,4 +1,4 @@
-name: Basic React App
+name: Expense Tracker App
 
 on:
   push:
