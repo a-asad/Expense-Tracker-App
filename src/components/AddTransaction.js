@@ -17,7 +17,7 @@ function AddTransaction() {
       <h3>Add Transaction</h3>
       <hr/>
       <label>Description:</label>
-      <input type="text" id="desc" place holder="Enter description"/>
+      <input type="text" id="desc" placeholder="Enter description"/>
       <label>Amount:</label>
       <input type="number" id="amount" placeholder="-ive -> expense, +ive -> income"/>
       <button className="btn" onClick={Add}>Add</button>
