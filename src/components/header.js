@@ -10,11 +10,11 @@ function Header() {
     return bal;
  }
   return (
-      <div  className="header">
-          <h2>
+      <div className="header">
+          <h1>
         Expense Tracker
-        </h2>
-        <h3>Balance : ${getBalance()}</h3>
+        </h1>
+        <h2>Balance : ${getBalance()}</h2>
       </div>
   );
 }
