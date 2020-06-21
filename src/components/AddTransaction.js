@@ -1,15 +1,26 @@
 import React from 'react';
+import { context } from './context';
+
 
 function AddTransaction() {
+    let {dispatch} = React.useContext(context);
+
+    function Add(){
+        let trans = {desc:document.getElementById("desc").value,amount:document.getElementById("amount").value};
+        document.getElementById("desc").value = "";
+        document.getElementById("amount").value = "";
+        dispatch({data:trans, type:"add"});
+    }
+
   return (
     <div className="add-transaction">
       <h3>Add Transaction</h3>
       <hr/>
       <label>Description:</label>
-      <input type="text" placeholder="Enter description"/>
+      <input type="text" id="desc" place holder="Enter description"/>
       <label>Amount:</label>
-      <input type="text" placeholder="-ive -> expense, +ive -> income"/>
-      <button className="btn">Add</button>
+      <input type="number" id="amount" placeholder="-ive -> expense, +ive -> income"/>
+      <button className="btn" onClick={Add}>Add</button>
     </div>
   );
 }

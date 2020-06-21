@@ -4,10 +4,12 @@ import './App.css'
 import Total from './components/total';
 import History from './components/history';
 import AddTransaction from './components/AddTransaction';
+import { TransactionProvider } from './components/context';
 
 function App() {
   return (
-    <div className="mn">
+    <TransactionProvider>
+      <div className="mn">
       <div className="main">
       <Header></Header>
       <Total></Total>
@@ -15,7 +17,7 @@ function App() {
       <AddTransaction></AddTransaction>
     </div>
     </div>
-    
+    </TransactionProvider>
   );
 }
 
