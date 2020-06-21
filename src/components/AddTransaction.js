@@ -6,6 +6,16 @@ function AddTransaction() {
     let {dispatch} = React.useContext(context);
 
     function Add(){
+        if(document.getElementById("desc").value === "")
+        {
+            alert("Error! Enter a valid description!");
+            return;
+        }
+        if(document.getElementById("amount").value === "" || parseInt(document.getElementById("amount").value) === 0)
+        {
+            alert("Error! Enter a valid amount!");
+            return;
+        }
         let trans = {desc:document.getElementById("desc").value,amount:document.getElementById("amount").value};
         document.getElementById("desc").value = "";
         document.getElementById("amount").value = "";
